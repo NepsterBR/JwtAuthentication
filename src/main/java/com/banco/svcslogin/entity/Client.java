@@ -27,8 +27,8 @@ public class Client {
     private String password;
 
     public String toString() {
-        return "Client(idUser= " + this.getIdUser() +
-                ", name= " + this.getName() +
-                ", client= " + this.getCpf() + ")";
+        return "Client(idUser = " + this.getIdUser() +
+                ", name = " + this.getName() +
+                ", cpf = " + this.getCpf() + ")";
     }
 }
