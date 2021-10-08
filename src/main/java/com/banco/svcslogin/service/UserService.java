@@ -28,7 +28,7 @@ public class UserService {
             "7f-j&CKk=coNzZc0y7_4obMP?#TfcYq%fcD0mDpenW2nc!lfGoZ|d?f&RNbDHUX6"
                     .getBytes(StandardCharsets.UTF_8));
 
-    public String creatUser(UserRequest userRequest) {
+    public String createUser(UserRequest userRequest) {
         if (userRepository.findByCpf(userRequest.getCpf()).isPresent()){
             return "cpf já cadastrado no sistema";
         }
@@ -66,5 +66,12 @@ public class UserService {
             return "Não foi possivel validar o usuário.";
         }
     }
+
+    public String doesThisUserExist(String cpf){
+        var client = userRepository.findByCpf(cpf);
+        return client.map(value -> cpf + "," + value.getName()).orElse("UserNotFound");
+    }
+
+
 
 }
