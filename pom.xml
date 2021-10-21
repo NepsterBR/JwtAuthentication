@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.banco</groupId>
     <artifactId>svcs-login</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>svcs-login</name>
     <description>svcs-login</description>
     <properties>
@@ -51,6 +51,11 @@
             <version>0.11.1</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
             <version>0.11.1</version>
@@ -66,6 +71,11 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-crypto</artifactId>
             <version>5.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.0.4</version>
         </dependency>
     </dependencies>
 
@@ -84,6 +94,7 @@
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
 
 </project>
